@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - TechGizmoHub</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    :root {
+      --primary: #6366f1;
+      --primary-dark: #4f46e5;
+      --text: #1f2937;
+      --light-bg: #f8fafc;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: var(--light-bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: #64748b;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      margin-top: 2.5rem;
+    }
+
+    .contact-card {
+      background: white;
+      border-radius: 16px;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+      transition: all 0.3s ease;
+      text-align: center;
+      border: 1px solid #e2e8f0;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(99, 102, 241, 0.15);
+      border-color: var(--primary);
+    }
+
+    .icon-circle {
+      width: 80px;
+      height: 80px;
+      background: rgba(99, 102, 241, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      font-size: 2rem;
+      color: var(--primary);
+    }
+
+    .contact-card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+
+    .contact-link {
+      color: var(--primary);
+      font-size: 1.15rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .contact-link:hover {
+      color: var(--primary-dark);
+      text-decoration: underline;
+    }
+
+    .phone {
+      font-size: 1.4rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-top: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid #e2e8f0;
+      color: #64748b;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2rem; }
+      .contact-card { padding: 2rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Contact Us</h1>
+      <p class="subtitle">We're here to help — feel free to reach out anytime!</p>
+    </header>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="icon-circle">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <h2>Email Us</h2>
+        <p>For questions, feedback, suggestions, or any kind of support</p>
+        <br>
+        <a href="mailto:TechGizmoHub@gmail.com" class="contact-link">
+          TechGizmoHub@gmail.com
+        </a>
+      </div>
+
+      <div class="contact-card">
+        <div class="icon-circle">
+          <i class="fas fa-phone-volume"></i>
+        </div>
+        <h2>Call Customer Service</h2>
+        <p>We're available to assist you directly over the phone</p>
+        <br>
+        <a href="tel:+447457072528" class="contact-link phone">
+          +44 745 707 2528
+        </a>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2026 TechGizmoHub • We appreciate your feedback!</p>
+    </footer>
+  </div>
+
+</body>
+</html>
+
+<div class="nav-links">
+  <a href="index.html">Home</a>
+  <a href="laptops.html">Laptops</a>
+  <a href="mobile.html">Phones</a>
+  <a href="smarthomes.html">SHome</a>
+  <a href="faq.html">FAQ </a>
+  <a href="contact.html">Contacts</a>
+  <a href="about.html">About</a>
+  <div class="auth-buttons">
+  </div>
+</div>
+</nav>
+

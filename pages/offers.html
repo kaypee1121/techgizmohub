@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hot Console Deals - TechGizmoHub</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    :root {
+      --primary: #b31919a9;
+      --primary-dark: #1512be;
+      --secondary: #701717;
+      --dark: #0f172a;
+      --light: #f8fafc;
+      --accent: #a8a394;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--dark);
+      color: white;
+      padding: 4rem 1rem 3rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.4rem;
+      opacity: 0.9;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: -5rem auto 4rem;
+      padding: 0 1.5rem;
+    }
+
+    .offers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 2.5rem;
+    }
+
+    .offer-card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+      transition: all 0.35s ease;
+      position: relative;
+    }
+
+    .offer-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.18);
+    }
+
+    .badge {
+      position: absolute;
+      top: 20px;
+      right: -45px;
+      background: var(--primary);
+      color: white;
+      padding: 0.6rem 5rem;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transform: rotate(45deg);
+      z-index: 10;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .image-container {
+      height: 280px;
+      overflow: hidden;
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: transform 0.4s ease;
+    }
+
+    .offer-card:hover .image-container img {
+      transform: scale(1.08);
+    }
+
+    .content {
+      padding: 2rem 1.8rem;
+      text-align: center;
+    }
+
+    .content h2 {
+      font-size: 2.1rem;
+      margin-bottom: 1rem;
+      color: var(--dark);
+    }
+
+    .price-block {
+      margin: 1.5rem 0;
+    }
+
+    .original-price {
+      font-size: 1.4rem;
+      color: #64748b;
+      text-decoration: line-through;
+      margin-bottom: 0.4rem;
+    }
+
+    .deal-price {
+      font-size: 3.2rem;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1;
+    }
+
+    .savings {
+      font-size: 1.3rem;
+      color: var(--accent);
+      font-weight: bold;
+      margin-top: 0.5rem;
+    }
+
+    .specs {
+      margin: 1.8rem 0;
+      font-size: 1.1rem;
+      color: #351179;
+    }
+
+    .specs ul {
+      list-style: none;
+      text-align: left;
+      max-width: 320px;
+      margin: 1rem auto;
+    }
+
+    .specs li {
+      margin: 0.9rem 0;
+      padding-left: 1.8rem;
+      position: relative;
+    }
+
+    .specs li::before {
+      content: "\f058";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      color: var(--secondary);
+      position: absolute;
+      left: 0;
+      top: 2px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      padding: 1rem 2.2rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 50px;
+      text-decoration: none;
+      margin-top: 1rem;
+      transition: all 0.3s;
+      box-shadow: 0 6px 20px rgba(114, 29, 225, 0.712);
+    }
+
+    .btn:hover {
+      background: var(--primary-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(70, 23, 158, 0.781);
+    }
+
+    footer {
+      background: var(--dark);
+      color: #4012aa;
+      text-align: center;
+      padding: 3rem 1rem;
+      margin-top: 4rem;
+    }
+
+    @media (max-width: 800px) {
+      header h1 { font-size: 2.6rem; }
+      .deal-price { font-size: 2.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🔥 Epic Console Special Offers 🔥</h1>
+
+
+
+</header>
+
+  <div class="container">
+    <div class="offers-grid">
+
+      <!-- Nintendo Switch 2 Offer -->
+      <div class="offer-card">
+        <div class="badge">25% OFF</div>
+        <div class="image-container">
+          <img src="https://imageio.forbes.com/specials-images/imageserve/6794eecd834aa85ee15cd5ac/0x0.jpg?format=jpg&height=600&width=1200&fit=bounds" alt="Nintendo Switch 2 Console">
+        </div>
+        <div class="content">
+          <h2>Nintendo Switch 2</h2>
+          <div class="price-block">
+            <div class="original-price">£399.99</div>
+            <div class="deal-price">£299.99</div>
+            <div class="savings">SAVE £100.00!</div>
+          </div>
+          <div class="specs">
+            <ul>
+              <li>Next-generation hybrid console</li>
+              <li>128GB internal storage</li>
+              <li>Improved performance & display</li>
+              <li>Backward compatible with Switch games</li>
+            </ul>
+          </div>
+          <a href="#" class="btn">Buy Now – Only £299.99</a>
+        </div>
+      </div>
+
+      <!-- Xbox Series X Offer -->
+      <div class="offer-card">
+        <div class="badge">50% OFF</div>
+        <div class="image-container">
+          <img src="data:image/webp;base64,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" alt="Xbox Series X Console">
+        </div>
+        <div class="content">
+          <h2>Xbox Series X</h2>
+          <div class="price-block">
+            <div class="original-price">£999.98</div>
+            <div class="deal-price">£499.99</div>
+            <div class="savings">MASSIVE 50% SAVING!</div>
+          </div>
+          <div class="specs">
+            <ul>
+              <li>1TB SSD storage</li>
+              <li>4K gaming at up to 120fps</li>
+              <li>Includes 2 wireless controllers</li>
+              <li>Ultra-fast load times & Quick Resume</li>
+            </ul>
+          </div>
+          <a href="#" class="btn">Grab This Deal – £499.99</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 TechGizmoHub • Limited stock available • Prices include VAT • While stocks last</p>
+  </footer>
+
+</body>
+</html>
+
+<div class="nav-links">
+  <a href="index.html">Home</a>
+  <a href="laptops.html">Laptops</a>
+  <a href="mobile.html">Phones</a>
+  <a href="smarthomes.html">SHome</a>
+  <a href="faq.html">FAQ </a>
+  <a href="contact.html">Contacts</a>
+  <a href="about.html">About</a>
+  <div class="auth-buttons">
+  </div>
+</div>
+</nav>
+

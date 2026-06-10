@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FAQ - TechGizmoHub</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    :root {
+      --maroon: #4a1d3a;
+      --purple: #9b2c6e;
+      --gray: #333333;
+      --light-gray: #f8f8f8;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: white;
+      color: var(--gray);
+      line-height: 1.7;
+    }
+
+    /* Top Navigation Bar */
+    .top-bar {
+      background: linear-gradient(to right, #2c2c2c, #4a1d3a, #9b2c6e);
+      height: 6px;
+    }
+
+    header {
+      background: var(--maroon);
+      color: white;
+      padding: 2rem 0;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      background: white;
+      border-bottom: 1px solid #ddd;
+      padding: 1rem 0;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      font-size: 1.1rem;
+    }
+
+    .nav-link {
+      color: var(--gray);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-link:hover {
+      color: var(--purple);
+    }
+
+    .main-content {
+      max-width: 1100px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+    }
+
+    h2.page-title {
+      font-size: 2.4rem;
+      color: var(--maroon);
+      margin-bottom: 2.5rem;
+      text-align: center;
+    }
+
+    .faq-section {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      margin-bottom: 1.2rem;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .faq-question {
+      background: #f9f9f9;
+      padding: 1.4rem 1.8rem;
+      font-weight: 600;
+      font-size: 1.15rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.3s;
+    }
+
+    .faq-question:hover {
+      background: #f0f0f0;
+    }
+
+    .faq-answer {
+      padding: 0 1.8rem 1.8rem;
+      display: none;
+      background: white;
+      font-size: 1.05rem;
+    }
+
+    .faq-answer.show {
+      display: block;
+    }
+
+    .arrow {
+      transition: transform 0.3s;
+    }
+
+    .faq-question.active .arrow {
+      transform: rotate(180deg);
+    }
+
+    footer {
+      background: var(--maroon);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 5rem;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+      .nav-container {
+        gap: 1rem;
+        font-size: 1rem;
+      }
+      header h1 {
+        font-size: 2.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top thin colored bar -->
+  <div class="top-bar"></div>
+
+  <!-- Header -->
+  <header>
+    <h1>TECHGIZMOHUB</h1>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <a href="#" class="nav-link">Home</a>
+      <a href="#" class="nav-link">Mobiles</a>
+      <a href="#" class="nav-link">Laptops</a>
+      <a href="#" class="nav-link">Smart home</a>
+      <a href="#" class="nav-link">Accessories</a>
+      <a href="#" class="nav-link">Offers</a>
+      <a href="#" class="nav-link">About</a>
+      <a href="#" class="nav-link">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <h2 class="page-title">Frequently Asked Questions (FAQ)</h2>
+
+    <div class="faq-section">
+
+      <div class="faq-item">
+        <div class="faq-question">
+          What is the warranty period for products?
+          <span class="arrow">▼</span>
+        </div>
+        <div class="faq-answer">
+          Most products come with a minimum 12-month manufacturer warranty. Some premium items like laptops and smartphones offer up to 24 months. Extended warranty options are available at checkout.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          Do you offer international shipping?
+          <span class="arrow">▼</span>
+        </div>
+        <div class="faq-answer">
+          Yes, we currently ship to most countries in Europe and selected countries worldwide. Shipping fees and delivery times vary by location and will be shown at checkout.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          How long does delivery take?
+          <span class="arrow">▼</span>
+        </div>
+        <div class="faq-answer">
+          Standard delivery within the UK takes 2–5 business days. Express delivery is available for next-day or 48-hour service in most areas.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          Can I return or exchange a product?
+          <span class="arrow">▼</span>
+        </div>
+        <div class="faq-answer">
+          Yes, you have 30 days from the date of delivery to return unused products in original packaging for a full refund or exchange. Please contact our customer service team to initiate a return.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          Are the prices inclusive of VAT?
+          <span class="arrow">▼</span>
+        </div>
+        <div class="faq-answer">
+          All prices displayed on our website include VAT. No additional tax will be added at checkout.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          Do you sell genuine brand products?
+          <span class="arrow">▼</span>
+        </div>
+        <div class="faq-answer">
+          Absolutely. All products sold on TechGizmoHub are 100% genuine and sourced directly from authorized distributors or manufacturers.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          How can I track my order?
+          <span class="arrow">▼</span>
+        </div>
+        <div class="faq-answer">
+          Once your order is shipped, you will receive a tracking number via email. You can track your package using the link provided or by logging into your account.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          Do you offer price matching?
+          <span class="arrow">▼</span>
+        </div>
+        <div class="faq-answer">
+          Yes, we offer price matching on identical products from major UK retailers. Contact our customer service team with the competitor’s price and product link for verification.
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    © 2026 TechGizmoHub • Your Trusted Electronics Store
+  </footer>
+
+  <script>
+    // Simple FAQ accordion functionality
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const answer = question.nextElementSibling;
+        const isActive = question.classList.contains('active');
+
+        // Close all other answers
+        document.querySelectorAll('.faq-question').forEach(q => {
+          q.classList.remove('active');
+          q.nextElementSibling.classList.remove('show');
+        });
+
+        // Toggle current
+        if (!isActive) {
+          question.classList.add('active');
+          answer.classList.add('show');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
+
+<div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="laptops.html">Laptops</a>
+    <a href="mobile.html">Phones</a>
+    <a href="smarthomes.html">SHome</a>
+    <a href="faq.html">FAQ </a>
+    <a href="contact.html">Contacts</a>
+    <a href="about.html">About</a>
+    <div class="auth-buttons">
+    </div>
+  </div>
+  </nav>
+  

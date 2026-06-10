@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Accessories – TechGizmoHub | Chargers & Phone Cases</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <style>
+        :root {
+            --primary: #4517c4;
+            --primary-dark: #3d1a8f;
+            --accent: #bbbbbb;
+            --dark: #1a1a1a;
+            --gray: #555;
+            --light: #f8f9fa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .top-bar {
+            background: var(--accent);
+            color: white;
+            text-align: center;
+            padding: 0.6rem;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #e6f0ff 0%, #ffffff 100%);
+            padding: 5rem 20px 4rem;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .hero-subtitle {
+            font-size: 1.35rem;
+            color: var(--gray);
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .highlight-price {
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .products-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 20px 4rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin: 3rem 0 2.5rem;
+            color: var(--dark);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 28px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: all 0.25s ease;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+        }
+
+        .product-image {
+            height: 260px;
+            background: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .product-image img {
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: contain;
+        }
+
+        .product-info {
+            padding: 1.4rem;
+            text-align: center;
+        }
+
+        .product-title {
+            font-size: 1.22rem;
+            margin-bottom: 0.6rem;
+            min-height: 2.8em;
+        }
+
+        .price {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin: 0.4rem 0 0.8rem;
+        }
+
+        .old-price {
+            color: #888;
+            text-decoration: line-through;
+            font-size: 1.1rem;
+            margin-left: 0.8rem;
+        }
+
+        .badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: var(--accent);
+            color: white;
+            padding: 0.4rem 0.9rem;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            z-index: 10;
+        }
+
+        .add-to-cart {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.9rem 1.8rem;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-top: 1rem;
+            width: 85%;
+        }
+
+        .add-to-cart:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2.5rem 1rem;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2.2rem; }
+            .hero-subtitle { font-size: 1.15rem; }
+            .navbar { flex-direction: column; gap: 1rem; padding: 1rem 20px; }
+            .nav-links a { margin: 0 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="top-bar">
+    FLASH SALE: Chargers & Cases from $9.99 – While Stocks Last!
+</div>
+
+<header>
+    <nav class="navbar">
+        <a href="#" class="logo">TechGizmoHub</a>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Smart Home</a>
+            <a href="#">Phones</a>
+            <a href="#">Laptops</a>
+            <a href="#">Accessories</a>
+            <a href="#">Deals</a>
+        </div>
+    </nav>
+</header>
+
+<section class="hero-section">
+    <h1 class="hero-title">Chargers & Phone Cases</h1>
+    <p class="hero-subtitle">
+        Premium protection and fast charging — all at <span class="highlight-price">really cheap & reasonable prices</span><br>
+        Quality you can trust, savings you'll love.
+    </p>
+</section>
+
+<div class="products-container">
+
+    <h2 class="section-title">Fast & Wireless Chargers</h2>
+    <div class="product-grid">
+
+        <div class="product-card">
+            <div class="badge">Best Seller</div>
+            <div class="product-image">
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAQDxUQEA8REBEVEA8QDxAPEBUREBAQFRUWFhURFxYYHSggGRonGxYVITEkJSksLi4uFx8zODMsNygtLisBCgoKDg0OGhAQGzclHyUrLTcrNS0tLTctLi0uLS0tLS83KysrLS0rLS8tMC0tNysuLTMtKzctLSsrLTMvLTEwM//AABEIAOEA4QMBIgACEQEDEQH/xAAcAAEAAQUBAQAAAAAAAAAAAAAABwECAwUGBAj/xABGEAACAgEBAwoCBgcFBwUAAAABAgADEQQFEiEGBxMiMUFRYXGBUpEUMkJyobIjJGJzgpKxMzRDwdEIY6KzwuHxFSVTZIP/xAAZAQEAAwEBAAAAAAAAAAAAAAAAAgMEAQX/xAAoEQEAAgIBAwMDBQEAAAAAAAAAAQIDESEEEjETQWFRgZEFIjKh0UL/2gAMAwEAAhEDEQA/AJxiIgIiICIiAiIgIiICebaWvq01L33uK6q1L2O3Yqj+p8u+emQtz/coSWp2ajcMDU6nB7eJFSH3DNjyWdiNjHtTnyt6Q/RNCnQg9VtRYRY48d1eC+mTPZszn2pPDVaC2s/Fp7FtHruvuEfMyGJY9JPESycf0Qi31fTWyuc/Y+owBrUqb4dSrUfi4C/Izq9Nqq7V3qrEsXuatg6/MT46WsAYZCf2lbB+WJbpdRZQ29TZZS/DrVO1bfNSJXMTHlLe32bE+Y9j85e2NNj9a+kKMZTVKLCR4b/1vfMmLkTzkUa9UW1egtdmrUE5RrF3coD3HrKR45HHPCJiYNu6iInHSIiAiIgIiICIiAiIgIiICIiAiIgIiICIiBZdaqKXYhVVSzMewKBkk+0+SuUm2G12tv1bZ/S2syA/ZqHVrX2QLJ357dvfRdltShxbqm+jrjtFX1rW/lG7/GJ87pLMcco2lmpqzNnp9BkTX02YM6DQatQOM9Pp6092LPa0Rw12p0OJrLUxOg2hq1PZNHqDmOorTXBhtafLzzruTWwNTqdA50+7vJedUBvblpCr0atWT4FLCf4ZyNdbOwReLMyov3mOB/WSftVl0OygiEhrFWmsqd191lwWHg3Rgn7xnm5J9mysNrbziajTldzUrcu6N8ahAVDd4RgFcj7092zOerTFwl9JHxWacmwKPiKYzj3MjRq9nDBq01jYUZOuta5i3edxAF+cvO0OruKuE7DWirTWR4YTifnKkojUPprT3rYi2IwdHVXRlOQysMhgfAgzJOb5ubkfZOl3DwSlaiPhevqMPmOHlidJDpERAREQEREBERAREQEREBERAREQERNPyu22ug0N+rbH6OolAftWnq1p7sVHvAgXnn299L2q1anNWlX6Ovgbe24/zYX+CcKGlr2MzFnYs7MWdj2szHLMfUkzLTUWOACT3ADJllN+yNloaZVvIntTY15Gehs9kY/5TxXUkS/Vq8qu6lp0qbiZazzFKb0j6kpdsOk5CbN6fVgkZWscfvMCPyh/QlZ6+czXtdqxSp6lKYOM8bXwW+Q3B85veQ9SaTRvfZwbozcwxx3W4ge4VFx4q04nWXB3axvrM7MxJ4lmOT+JmeZ3KyFmydSVYJYcqeAJ+yf9JvzQBK7G5utp67DV6c019ot1RNKn0XBc+oXHnMOl1BasbwIbGGB7Qw4EHznHUk8zm1t223Rseq69PV5OuFce43T/AAGSvPnbkdruh2npX/8AsJWfS39Efzz6JgIiICIiAiIgIiICIiAiIgIiICIiAkL/AO0Lt7+w2eh7f1q8DwGUqU+++cfsrJmdwoLEgAAkk8AAO0z5L5U7XfaW0btSoZultIoUAluiXq1KFHHO6ASPEmIcmdNfodNvntwo+s3hNxVteugbtFYJ73bv/wAzNPe5X9EMjBw4Iwd4doIl2m0zN3TXS3bxXyovSL828Ol0HKy+s5K1sO9cFeHkQeE2+0tNRtPTNqKF3b0B3l4bxIGejbxyOw/9xOS2ns6yhENmFLgkVn64UdjMO4Hjjv4GbDm+1hTW7merZW6keLL1lP4N85XnmP5x5eV1XT17J6rDxavPHiYjzDl3M9GytJ016VYyGYbw8VHEj37PcTJt2kV6q5B2LfaB5LvEgfLE3vIDZbW2WWY4KFTw4OwDY893JHmkrtO3s47RasWj3dnVs4ap9Ns/fKjU2G650xvLpqlLAjPYW3VPEYBJko8n+RWz9DhqNMvSD/Gs/S3ezt9X0XAkYcitSbdv1Xf4bDU1U+BrrRlyPIsGMm+QWE+XdsdTW6tB2Lr9co9BfYBPqB2ABJOAASSewAdpnypqdT011t4zi2++8Z7cWWM//VA2OwMtrdMB2nV6UD1Nqz6ckAc1uyjqNp1NjKU5vsPcN0YQeu+VPsZP8BERAREQEREBERAREQEREBERAREQOD56NvfRNlOiti3Un6MniEYE2t/IGHqwkK83lCi+3UN9WihmHkzZ4/yq495uOfDb30ranQKc16ROhHgbnw1p/Ivqhmt5B179GuQfWalAPPK3D+pkb/xYP1OddLf7R9pmIn+mg036RzZZ9Z2Z2+8xyfxMkLkrptMQGVle0DJXH9n54Pb6yMUu4cJv6+UA09Ap0pO+4DajUEYYsR/Z1juA7M+pHbmaLW/Z214VfqHT5MuP08c639PGvn4+I5n8tryy0o6Qk2B2PFsfZ8FPhwms5A6cttBT3JXa59xuD801p1xK4J+c6HQD/wBP2dZqG6t+pwlAP1lTB3W+RZv5ZzqJjtiIV562x9L6O92t+2Pvx4+kQ5XbGo6XU3WA5DXWspHepY7v4Ykh7JoOj2UAo/T3lQg7zZd1Ux6L1vnOC5N7O+kaqunHV3gX8kXifwElihOn2ii/4elr6Vh3dPYMVr7Lkyp61KxWsVj2chtJWpq0oRirItiq6EqysLrSGBHYcrmdnyc51r6gK9bV9IUcOmrwl2P2lPVY/wAvvNds7k8u0Wq0xtanKWutiAMylbdQew9vh7zZjmTszx2sxXy0pB/5sJM/LznN01+hbTaJrOmuHR279bIaKWHX49hYjqjB4ZJ7hmN9ibHv1Vgp09TWOccAOCj4mPYo8zJe2RzQ6CnBtsu1B7wSK0PsvW/4p3WztnUaZOjoqSpPhrUKCfE+J8zA03IfksmzdPuZD3OQ19g7Cw7EX9kZOPUnvxOjiICIiAiIgIiICIiAiIgIiICIiAms5S7YTRaO7VvxFVTOAeG8/YiepYqPebOQ9/tBbexXRs9G42N9JvA/+NCRWp8i+T/+cCE77nsdrLDvWO7WWMftOxLM3zJm85E7VGm1YLnFdi9E5PYpJBVz5A8PRjNERPRo9FZa27Whc4LEDHYPX1kprvhRnxVy47Y7eJhv+VfJW2m1raUayhiWAQbzVE8SpA47vgR3dvnztOmsdt1K3dvhVGY/ICdHsnlPq9IorYCxFyFS0EOuOG6G7cDGMHOPKezU84VxGE09aH4mdrB8gFnO3JXiYedjyddjj0+yL6/67tfmPLHsjkyunX6VtEiuteK0E5LN3Bsdv3R29/hNDyj22+su6QjdRQVqr+BfE/tHv9vCebae07tS+/fYXP2QeCr5Ko4CeWusswVRkkhQB2knsEjET5lqwdNfv9XNO7+2vFY+P98u75udItVVuss4DBVSe5F6zn8B8jO45H6dl0xucYs1DtqH8lb6i+gXHznP3aEJTptnIeNjKthHD9GvXtb3/wCqdwuAMAYAGAO4DwnW5rOb8frtH7m78+okryK+QI/Xaf3Nv59RJUgIiICIiAiIgIiICIiAiIgIiICIiAiIgUJxxM+UOW23DtDaN+qzlGsKUeAor6qEeoG96sZPfO9t76Fsm3dbFt+NLTjtBsB32HhhA5z44nzUi90nSu5RtKmJn07FTlSVPipIP4TJp9PvGbAbMOM4mqmC08wzZM1Y4lkTbTY3bq69QuWJFigNvHiSHAyCTjJ7Tju7Zp9dYjOTXX0acMJvF8cOPWPE8czNqaCJ42Ejl37wnjnbEROj5B7O6bVhyOpUN8+G92KP6n+Gc8ZIXJyo6PZhuC5ut6yADJZm6tSjx7c+8zWXw67k1o+mOr17Dqo1Wi0x+66tcw/i3RnyM2+ZuE2ONDserTcCyLV0hH2rWcNY3uxYzRhpF1g5Bj9dq/c2/nvkoyMOQg/Xav3Nn5rpJ8BERAREQEREBERAREQEREBERAREQERED5+599sG7aSaUHqaWoFh/v7gGJ/k6P5mRys7rnq2Rbp9q2ahlPQ6kVNXZjq76oqNWT3MN3OPAicIDnsl+PWldvLbbLYZ4zqUKbvdOGptIntG0WxjM9TDnrFdS8zqelnJbcPVtYrnhNHYJnu1BaedjMue8WnhrwUmldM+y9EdRqK6R9pxvHwUcWPyzJj5PaAaralFIX9DpU+l2j7O+Orp09c5b0WcPza7NLu9+7kkimoeJOM4/wCEe5k7ckeTS6FLGZg997iy+wdnAYrqXP2VHAeJJPDOB59p3LXD0crP7o33q/zicSDO15W/3RvvV/nE4hZx1fyFH67X+5s/NbJNkbciFxrk/dWfmeSTAREQEREBERAREQEREBERAREQEREBERAwazSVXIa7q0trbgyWKHU+oMjzlBzM7Pvy2mZ9G/cEO/Vn7rcR7GSVmUzA+btvc1W1dJlkrXV1j7VBy+PuHj8szirgyMUsRq2HAq6lSPYz7GzNbtnYWk1i7up09Vw8XUbw9G7R85OL2hGaxL5KzLq6msZa0G87sEQDvJ4fKTftnmT0dh3tLqLdP+w2LE9ieI/GeDZ3NJqNNaHp1FLHsZ7lbIU9u7untxJTk3DnY3HNrsJa2RBxShd5m+K05wfnk/wyTczX7G2amlqFacT2u54F27z5ek9uZUm1PK7+6N9+r84nHU15nX8rD+qt9+r8wnLaZxAcjxjaAHhXZ/VpImZHnJM/+4n93Z/UyQMwL8xmWZjMC/MZmPMuBgXxKCVgIiICIiAiIgIiICIiBQmWloaWQLt6My2IF2ZQmYr7d0Z9h6wteRnIJgVa0est6U+UoyES3EC9rwASQeAJwBvE+gHaZHXKXnRahzVRorFcZ62tBq9xUOJHnvCSDPPrdHVem5dUlqfDYgcfIwIi0/LvXay0U3vX0TZJSuoLxHEcTk9o8ZuKdVjvm8v5uNH0gtoZ9OwyQoPSVHIx9VuI9j7TnNr7Ps0z7lmOIJRgeq4HeIHo5O7do0+tNuos6OvdZN8gsAzHhnAOB5yTtDrqr06Sm2u1PiqcOvzE+atdqi/DzXP4mYdJqrKX36bHqf46nZG9MqcwPqKVkH7G50dfTgXCvVp/vB0dv86jHzUzutjc52z78Laz6V/C8fo8+Vi5AH3t2B2srMWnvSxQ9brYh+q6MGU+hHCZYF4l0sWXQKxEQEREBERAREQEpEQLWlkvMtMC13CgsxAAGSScADxJ7py21+X+ioyEZtQ/hSOpn754Y9Mzy86jkaSvrEKbwHA7G6jkA+IyM+wkWEBuKkGB3eh5fWanUhLK66asEoFJZt/9pj28M9gE6/Ta8HiG+RkDa8MF6pKnIII8pm2byt1NHBjvDzgfQlWuPfxmXpVPlIk2Byz02/vcamYYZA7dETnO8EJwrea47eOZ3Gh21XYMqwPoYHRhcyhE8NOsHjMj6kAdsD0Fpw/OvSraAvgl67K2QqcMN47jYPo34TdbR29VUCXdVA7ycSO+VXKxNYOhqOUB3mbuYjsA8u+BH1eMnIbJ4DLcB5zKFl1yYaVxAtxGJdw/8S7fA8v6wNxyN1uoo1tJosavfvpSxQepYjOqlWXsbgfbyn0ZIE5udmPqdbXYFPQ02LbZYewuh3kQeJ3gPbPlJ2R8wMwl0sBlwgXRKSsCsSglYCIiAlJWUgJSVlIFpmNjMhljLA5vlts06vRvUpAsBFlRb6u+ueB8AQSM92ZAmod6rDXarU2L2q3A+oPePMcJ9LXVZnPbb5NUald22pX9RnHmPCBBy64444Yfj85jda27DunwPCdntrmyZctpbSv7FmWX0B7R+M4naWy9Vpji+lgPjUbyfMdnviB57tGR/wBpl0G09Tp2zW54dxPCYKtT4Nw8O6ZTep+svuIHXaPnCsVcPU2fIgiYNo8v9VYN2pRWPibi3yE5talPfKNur3E/0gWam625t612sP7R4fLsl2n6hz2Sxrj6DylKKnsbdrRnbwUEwMttwJ4D5zE1vifadXsbm/1V2DaRUvgOs/8AoPxnf7C5B6bT4PR7z/G/Wb8ez2gRXsvk7rNSR0dRRT9uzqj2HaZ3Gw+bWsYbUMbT8PYny7/eSRptAqjgAJ7q6QIGs2ZstKVCooVQMAAYA9ptq0l6pLwIFAJcIAlYCViIASsRAREQERECkSspApLSJfKYgYysxtXPRiUxA8NmnBng1ezEcYZQfabsrLTXAjDb3Nvprssimp/ir6vHzHYZwO1+Q2u0+Sq9Og+Hg+PQ/wCRn0S1ImJ9GD2iB8xAWr1WpsU+BrYf5T26DYOr1J6lDAfE4KL+PGfRLbJqPag+UyV7PRexQPaBE+xObMcG1Dl/2V6q/wCpne7K5OUUKFrrVR5ACdEunAmQVwPHVpQO6ehKpnCyoECwJLwJXEriBTErKxAREQErEQEREBERAREQEREBKSsQKRKxAtxGJdKQKYlMS6IFuIxLogUxGJWIFMSsrECkSsQKSsRAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQP/9k=" alt="3-in-1 wireless charger">
+            </div>
+            <div class="product-info">
+                <h3 class="product-title">3-in-1 Wireless Charging Station<br>(Phone + Watch + Earbuds)</h3>
+                <p class="price">$19.99 <span class="old-price">$39.99</span></p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="badge">-45%</div>
+            <div class="product-image">
+                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSN-iCU0YRex04ROc8nLXGsPxp4YtOk7-XdXqqc1WxTzkPfMnlEcQYwkoaVO7p1vrONDtjh644sSIOx2y07nuINXfCu0te6U7Nb06Jg47gLAiouUgyy5oIFXZpHJ68Ie0KlEWInVQ&usqp=CAc" alt="Fast wall charger">
+            </div>
+            <div class="product-info">
+                <h3 class="product-title">65W GaN Fast Charger + 2m Cable</h3>
+                <p class="price">$14.99 <span class="old-price">$26.99</span></p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRgbA5Unqa63NHDGQ-At7hZb95BXgiaOYzsTkZNWDVbP4ToHb8VjrKbPj_GJKtP0eL3nGS9NyTtMwB-Ru9bfIatTfGE4ADm7zPGDj7nUvIFGWL6_4v_Ajl-lvg0wKvYf_IZ58r6rpjm0w&usqp=CAc" alt="Portable power bank">
+            </div>
+            <div class="product-info">
+                <h3 class="product-title">10000mAh Slim Power Bank<br>20W PD Fast Charging</h3>
+                <p class="price">$17.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="badge">New</div>
+            <div class="product-image">
+                <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRlllozt_KUS8Z_1K_nidLi2ZvZENK6Pq3ftRu2XsiYKAn7vH58ILALzgi5DStW78ZeizxYlNTZhU1LAvIXvXi56J0xX1nfeRB_pV_2M2bgUhGDyHTUQ8hkvLxDGF41OMq_b_o48GHmcg&usqp=CAc" alt="Magnetic wireless charger">
+            </div>
+            <div class="product-info">
+                <h3 class="product-title">MagSafe-Compatible Magnetic Charger 15W</h3>
+                <p class="price">$12.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+    </div>
+
+    <h2 class="section-title">Protective & Stylish Phone Cases</h2>
+    <div class="product-grid">
+
+        <div class="product-card">
+            <div class="badge">Popular</div>
+            <div class="product-image">
+                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTZYMaTS7Tj8GszqSdLMT2119rOQF5kybMDkeLTB1LVZ_zpzP99K3xoo-4N_p8nUf5NFQB6vRQeQqC3IATsVEjBWdkiJa8qobr2JjHmuVcDfZQE9OAZ7JMuHiM8dZ19IJL80O_K2A&usqp=CAc" alt="Clear phone case">
+            </div>
+            <div class="product-info">
+                <h3 class="product-title">Military-Grade Clear Shockproof Case</h3>
+                <p class="price">$9.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="badge">-50%</div>
+            <div class="product-image">
+                <img src="data:image/jpeg;base64,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" alt="Silicone phone case">
+            </div>
+            <div class="product-info">
+                <h3 class="product-title">Liquid Silicone Case – Matte Finish</h3>
+                <p class="price">$8.99 <span class="old-price">$17.99</span></p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSjc6UXQ3nZjXK-uEqxug-cYSxLNoW1F04vJqcmzCxCDPeS8Ilk908gyTK_4eiXr57UEhi8kSW58_TjRYrBL5AgghJZp-2WnNIXz2Y22I_cxgJOYUTb5DS9AQ&usqp=CAc" alt="Wallet phone case">
+            </div>
+            <div class="product-info">
+                <h3 class="product-title">Wallet Case with Card Slots & Kickstand</h3>
+                <p class="price">$14.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="badge">Trendy</div>
+            <div class="product-image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSAEhsGI8XVZk7gpzqlouEYfaHFUwoYlAu0w&s" alt="Patterned phone case">
+            </div>
+            <div class="product-info">
+                <h3 class="product-title">Aesthetic Pattern / Marble / Aesthetic Cases</h3>
+                <p class="price">$11.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 TechGizmoHub. All rights reserved.<br>
+    Fast Shipping • Secure Payments • 30-Day Returns</p>
+</footer>
+
+</body>
+</html>
+
+<div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="laptops.html">Laptops</a>
+    <a href="mobile.html">Phones</a>
+    <a href="smarthomes.html">SHome</a>
+    <a href="faq.html">FAQ </a>
+    <a href="contact.html">Contacts</a>
+    <a href="about.html">About</a>
+    <div class="auth-buttons">
+    </div>
+  </div>
+  </nav>
+  
